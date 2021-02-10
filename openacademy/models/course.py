@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-# modelos para tablas de la base de datos
 from odoo import models, fields, api
 
 
 class Course(models.Model):
-    #n
+    # Modelo course de la base de datos
     _name = 'openacademy.course'
     _description = "OpenAcademy Courses"
 
