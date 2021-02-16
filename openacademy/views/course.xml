@@ -12,15 +12,15 @@
                             <field name="responsible_id"/>
                         </group>
                          <notebook>
-                            <page string="Description">
+                            <page string="Descripción">
                                 <field name="description"/>
                             </page>
-                            <page string="About">
-                                This is an example of notebooks
+                            <page string="Acerca">
+                                Este es un ejemplo de notebooks
                             </page>
-                            <page string="Sessions">
+                            <page string="Sesiones">
                                 <field name="session_ids">
-                                    <tree string="Registered sessions">
+                                    <tree string="Registrar sesion">
                                         <field name="name"/>
                                         <field name="instructor_id"/>
                                     </tree>
@@ -40,10 +40,10 @@
                 <search>
                     <field name="name"/>
                     <field name="description"/>
-                    <filter name="my_courses" string="My Courses"
+                    <filter name="my_courses" string="Mis Cursos"
                             domain="[('responsible_id', '=', uid)]"/>
-                    <group string="Group By">
-                        <filter name="by_responsible" string="Responsible"
+                    <group string="Grupo por">
+                        <filter name="by_responsible" string="Responsable"
                                 context="{'group_by': 'responsible_id'}"/>
                     </group>
                 </search>

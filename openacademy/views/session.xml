@@ -14,7 +14,7 @@
                                 <field name="instructor_id"/>
                                 <field name="active"/>
                             </group>
-                            <group string="Schedule">
+                            <group string="Calendario">
                                 <field name="start_date"/>
                                 <field name="duration"/>
                                 <field name="seats"/>
@@ -68,7 +68,7 @@
             <field name="name">openacademy.session.graph</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
-                <graph string="Participations by Courses">
+                <graph string="Participaciones por Cursos">
                     <field name="course_id"/>
                     <field name="attendees_count" type="measure"/>
                 </graph>
@@ -106,13 +106,13 @@
                                 </div>
                                 <div t-attf-class="oe_kanban_content">
                                     <!-- title -->
-                                    Session name:
+                                    Nombre de la sesión:
                                     <field name="name"/>
                                     <br/>
-                                    Start date:
+                                    Fecha de inicio:
                                     <field name="start_date"/>
                                     <br/>
-                                    duration:
+                                    Duración:
                                     <field name="duration"/>
                                 </div>
                             </div>
@@ -123,12 +123,12 @@
         </record>
 
         <record model="ir.actions.act_window" id="session_list_action">
-            <field name="name">Sessions</field>
+            <field name="name">Sesiones</field>
             <field name="res_model">openacademy.session</field>
             <field name="view_mode">tree,form,calendar,gantt,graph,kanban</field>
         </record>
         
-        <menuitem id="session_menu" name="Sessions"
+        <menuitem id="session_menu" name="Sesiones"
                   parent="openacademy_menu"
                   action="session_list_action"/>
 
@@ -137,22 +137,22 @@
             <field name="name">wizard.form</field>
             <field name="model">openacademy.wizard</field>
             <field name="arch" type="xml">
-                <form string="Add Attendees">
+                <form string="Agregar Participantes">
                     <group>
-                        <field name="session_ids"/>
-                        <field name="attendee_ids"/>
+                        <field name="session_ids" string="Sesiones"/>
+                        <field name="attendee_ids" string="Participantes"/>
                     </group>
                     <footer>
-                        <button name="subscribe" type="object" string="Subscribe" class="oe_highlight"/>
-                            or
-                        <button special="cancel" string="Cancel"/>
+                        <button name="subscribe" type="object" string="Subscribir" class="oe_highlight"/>
+                             o 
+                        <button special="cancel" string="Cancelar"/>
                     </footer>
                 </form>
             </field>
         </record>
 
         <record id="launch_session_wizard" model="ir.actions.act_window">
-            <field name="name">Add Attendees</field>
+            <field name="name">Agregar Participantes</field>
             <field name="res_model">openacademy.wizard</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>

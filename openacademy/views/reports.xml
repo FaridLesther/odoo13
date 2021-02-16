@@ -1,7 +1,7 @@
 <odoo>
 
     <record id="report_session" model="ir.actions.report">
-        <field name="name">Session Report</field>
+        <field name="name">Reporte de Sesión</field>
         <field name="model">openacademy.session</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">openacademy.report_session_view</field>
@@ -16,8 +16,8 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2 t-field="doc.name"/>
-                        <p>From <span t-field="doc.start_date"/> to <span t-field="doc.end_date"/></p>
-                        <h3>Attendees:</h3>
+                        <p>Del<span t-field="doc.start_date"/> al <span t-field="doc.end_date"/></p>
+                        <h3>Participantes:</h3>
                         <ul>
                             <t t-foreach="doc.attendee_ids" t-as="attendee">
                                 <li><span t-field="attendee.name"/></li>

@@ -2,14 +2,14 @@
 <odoo>
 
         <record model="ir.actions.act_window" id="act_session_graph">
-            <field name="name">Attendees by course</field>
+            <field name="name">Participantes por cursos</field>
             <field name="res_model">openacademy.session</field>
             <field name="view_mode">graph</field>
             <field name="view_id"
                    ref="openacademy.openacademy_session_graph_view"/>
         </record>
         <record model="ir.actions.act_window" id="act_session_calendar">
-            <field name="name">Sessions</field>
+            <field name="name">Sesiones</field>
             <field name="res_model">openacademy.session</field>
             <field name="view_mode">calendar</field>
             <field name="view_id" ref="openacademy.session_calendar_view"/>
@@ -28,12 +28,12 @@
                     <board style="2-1">
                         <column>
                             <action
-                                string="Attendees by course"
+                                string="Participantes por curso"
                                 name="%(act_session_graph)d"
                                 height="150"
                                 width="510"/>
                             <action
-                                string="Sessions"
+                                string="Sesiones"
                                 name="%(act_session_calendar)d"/>
                         </column>
                         <column>
