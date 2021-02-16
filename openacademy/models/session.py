@@ -40,8 +40,8 @@ class Session(models.Model):
         if self.seats < 0:
             return {
                 'warning': {
-                    'title': _("Valor de plazas incorrecto"),
-                    'message': _("El número disponible de plazas no puede ser negativo"),
+                    'title': _("Incorrect 'seats' value"),
+                    'message': _("The number of available seats may not be negative"),
                 },
             }
         if self.seats < len(self.attendee_ids):
